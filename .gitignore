@@ -1,0 +1,8 @@
+node_modules/
+.vscode/
+.prettierignore
+nodemon.json
+secrets.json
+.env
+uploads/
+util/access.log

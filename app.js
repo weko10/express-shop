@@ -6,13 +6,17 @@ const app = http.createServer((req, res) => {
   if (req.url == "/") {
     let file = fs.readFileSync("home.html");
     res.write(file);
-  } else if (req.url == "/login") {
-    res.write("<html>");
-    res.write("<head><title>LOGIN</title></head>");
-    res.write("<body>");
-    res.write("<h1>THIS IS THE LOGIN PAGE</h1>");
-    res.write("</body>");
-    res.write("<html>");
+  } else if (req.url == "/login" && req.method == "GET") {
+    let file = fs.readFileSync("login.html");
+    res.write(file);
+  } else if (req.url == "/login" && req.method == "POST") {
+    let body = "";
+    req.on("data", chunk => {
+      body += chunk;
+    });
+    req.on("end", () => {
+      console.log(body);
+    });
   }
   res.end();
 });

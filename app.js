@@ -10,6 +10,9 @@ const app = http.createServer((req, res) => {
     let file = fs.readFileSync("login.html");
     res.write(file);
   } else if (req.url == "/login" && req.method == "POST") {
+    // redirect to home page
+    res.writeHead(302, { Location: "/" });
+
     let body = "";
     req.on("data", chunk => {
       body += chunk;

@@ -6,3 +6,4 @@ secrets.json
 .env
 uploads/
 util/access.log
+data.txt

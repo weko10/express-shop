@@ -18,13 +18,12 @@ app.on("request", (req, res) => {
     // redirect to home page
     res.writeHead(302, { Location: "/" });
 
-    // parse body
-    let body = "";
-    req.on("data", chunk => {
-      body += chunk;
-    });
+    // recieve body and parse body
+    const body = [];
+    req.on("data", chunk => body.push(chunk));
     req.on("end", () => {
-      console.log(body);
+      let parsedBody = Buffer.concat(body).toString();
+      fs.writeFileSync("data.txt", parsedBody);
     });
   }
   res.end();

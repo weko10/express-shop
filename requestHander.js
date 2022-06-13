@@ -1,7 +1,6 @@
 const fs = require("fs");
 
 const requestHandler = (req, res) => {
-  res.setHeader("Content-Type", "text/html");
   let url = req.url;
   let method = req.method;
 

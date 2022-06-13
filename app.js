@@ -22,8 +22,8 @@ app.on("request", (req, res) => {
     const body = [];
     req.on("data", chunk => body.push(chunk));
     req.on("end", () => {
-      let parsedBody = Buffer.concat(body).toString();
-      fs.writeFileSync("data.txt", parsedBody);
+      let parsedBody = Buffer.concat(body).toString() + "\r\n";
+      fs.writeFileSync("data.txt", parsedBody, { flag: "a+" });
     });
   }
   res.end();

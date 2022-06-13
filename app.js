@@ -25,6 +25,9 @@ app.on("request", (req, res) => {
       let parsedBody = Buffer.concat(body).toString() + "\r\n";
       fs.writeFileSync("data.txt", parsedBody, { flag: "a+" });
     });
+  } else {
+    // not found
+    res.writeHead(404);
   }
   res.end();
 });

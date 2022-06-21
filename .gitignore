@@ -7,3 +7,4 @@ secrets.json
 uploads/
 util/access.log
 data.txt
+package.json

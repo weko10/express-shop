@@ -1,9 +1,9 @@
-const http = require("http");
+const express = require("express");
 
-const { requestHandler } = require("./requestHander");
+const app = express();
 
-const app = http.createServer();
-
-app.on("request", requestHandler);
+app.use((req, res, next) => {
+  res.send("<h1>My second express app</h1>");
+});
 
 app.listen(8080);

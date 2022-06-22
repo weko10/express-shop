@@ -8,3 +8,4 @@ uploads/
 util/access.log
 data.txt
 package.json
+package-lock.json

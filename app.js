@@ -17,7 +17,7 @@ app.post("/add-product", (req, res, next) => {
 });
 
 app.get("/", (req, res, next) => {
-  res.send("<h1>Home</h1>");
+  res.send("<h1>Home</h1><a href=/add-product>Product</a>");
 });
 
 app.listen(8080);

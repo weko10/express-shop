@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // custom middleware
 app.use(shopRouter);
-app.use(adminRouter);
+app.use("/admin", adminRouter);
 
 // not found 404
 app.use((req, res, next) => {

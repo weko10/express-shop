@@ -1,7 +1,8 @@
 const router = require("express").Router();
+const path = require("path");
 
 router.get("/", (req, res, next) => {
-  res.send("<h1>Home</h1><a href=/admin/add-product>Product</a>");
+  res.sendFile(path.join(__dirname, "..", "views", "shop.html"));
 });
 
 module.exports = router;

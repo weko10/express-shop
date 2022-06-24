@@ -9,6 +9,9 @@ const adminRouter = require("./routes/admin");
 
 const app = express();
 
+// setup express app
+app.set("view engine", "ejs");
+
 // setup middleware
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: false }));

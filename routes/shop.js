@@ -2,7 +2,7 @@ const router = require("express").Router();
 const path = require("path");
 
 router.get("/", (req, res, next) => {
-  res.sendFile(path.join(__dirname, "..", "views", "shop.html"));
+  res.render(path.join(__dirname, "..", "views", "shop.ejs"));
 });
 
 module.exports = router;

@@ -18,10 +18,13 @@
     </header>
     <main>
       <h1>Admin</h1>
-      <form action="/admin/add-product" method="POST">
-        <input type="text" name="name" />
-        <input type="submit" value="Add" />
-      </form>
+      <div class="form add-product">
+        <form action="/admin/add-product" method="POST">
+          <label for="product-name">Product Name</label>
+          <input id="product-name" type="text" name="name" />
+          <input type="submit" value="Add" />
+        </form>
+      </div>
     </main>
   </body>
 </html>

@@ -4,6 +4,12 @@ body {
   font-family: sans-serif;
 }
 
+/* headings */
+h1 {
+  margin: 1rem;
+}
+
+/* navbar */
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -25,5 +31,40 @@ nav li a {
 }
 
 nav li a:hover {
+  background-color: #111;
+}
+
+/* form */
+form label {
+  display: block;
+}
+
+div.form {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+form input[type="text"] {
+  width: 35rem;
+  padding: 0.5rem 0.7rem;
+  margin: 0.5rem 0;
+  box-sizing: border-box;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
   background-color: #111;
 }

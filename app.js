@@ -22,7 +22,7 @@ app.use("/admin", adminRouter);
 
 // not found 404
 app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, "views", "404.ejs"));
+  res.status(404).render(path.join(__dirname, "views", "404.ejs"));
 });
 
 app.listen(8080);

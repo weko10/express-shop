@@ -10,6 +10,7 @@ const adminRouter = require("./routes/admin");
 const app = express();
 
 // plugged in middleware
+app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // custom middleware

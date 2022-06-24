@@ -1,7 +1,9 @@
+// core packages
+const path = require("path");
+
 // third-party packages
 const express = require("express");
 const bodyParser = require("body-parser");
-const path = require("path");
 
 // custom packages
 const shopRouter = require("./routes/shop");

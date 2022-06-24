@@ -9,7 +9,7 @@ router.get("/add-product", (req, res, next) => {
 // path: admin/add-product
 router.post("/add-product", (req, res, next) => {
   console.log(req.body);
-  res.redirect("/");
+  res.redirect("/admin/add-product");
 });
 
 module.exports = router;

@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 
 router.get("/", (req, res, next) => {
-  fs.readFile("./data.json", "utf-8", (err, data) => {
+  fs.readFile("./products.json", "utf-8", (err, data) => {
     if (err) {
       console.error(err);
       return;

@@ -11,7 +11,9 @@
     <header><%- include("./partials/navbar.ejs") %></header>
     <main>
       <h1>THIS IS THE HOME PAGE</h1>
-      <p>Some list of products to be served</p>
+      <% for( let i = 0; i < productList.length; i++ ) { %>
+      <li><%= productList[i] %></li>
+      <% } %>
     </main>
   </body>
 </html>

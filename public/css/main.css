@@ -68,3 +68,7 @@ input[type="submit"]:hover,
 input[type="reset"]:hover {
   background-color: #111;
 }
+
+img {
+  max-width: 350px;
+}

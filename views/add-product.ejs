@@ -3,23 +3,47 @@
   <body>
     <header><%- include("./partials/navbar.ejs") %></header>
     <main>
-      <h1>Admin</h1>
-      <div class="form add-product">
+      <div class="form mx-3 w-50">
         <form action="/admin/add-product" method="POST">
-          <label for="product-name">Product Name</label>
-          <input id="product-name" type="text" name="name" />
+          <div class="mb-3">
+            <label for="productName">Product Name</label>
+            <input class="form-control" id="productName" type="text" name="name" />
+          </div>
 
-          <label for="product-price">Price</label>
-          <input id="product-price" type="number" name="price" />
+          <div class="mb-3">
+            <label for="product-price">Price</label>
+            <input class="form-control" id="product-price" type="number" name="price" />
+          </div>
 
-          <label for="product-description">Description</label>
-          <input id="product-description" type="text" name="description" />
+          <div class="mb-3">
+            <label for="product-description">Description</label>
+            <input class="form-control" id="product-description" type="text" name="description" />
+          </div>
 
-          <label for="product-imgLink">Image Link</label>
-          <input id="product-imgLink" type="text" name="imgLink" />
+          <div class="mb-3">
+            <label for="product-imgLink">Image Link</label>
+            <input class="form-control" id="product-imgLink" type="text" name="imgLink" />
+          </div>
 
-          <input type="submit" value="Add" />
+          <input class="btn btn-primary" type="submit" value="Add" />
         </form>
       </div>
     </main>
 <%- include("./partials/end.ejs")  %>
+
+<!-- <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> -->

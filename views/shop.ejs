@@ -17,9 +17,9 @@
     <header><%- include("./partials/navbar.ejs") %></header>
     <main class="">
       <h1>THIS IS THE HOME PAGE</h1>
-      <div class="">
+      <div class="container mw-100">
         <% for( let i = 0; i < productList.length; i++ ) { %>
-        <div class="card text-center d-inline-block">
+        <div class="card text-center d-inline-block mx-2 my-3">
           <img
             src="<%= productList[i].imgLink %> "
             class="card-img-top"

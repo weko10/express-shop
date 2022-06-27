@@ -10,3 +10,4 @@ data.txt
 package.json
 package-lock.json
 products.json
+.prettierrc

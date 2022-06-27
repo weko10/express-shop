@@ -4,7 +4,9 @@ const fs = require("fs");
 
 // path: /admin/add-product
 router.get("/add-product", (req, res, next) => {
-  res.render(path.join(__dirname, "..", "views", "add-product.ejs"));
+  res.render(path.join(__dirname, "..", "views", "add-product.ejs"), {
+    pageTitle: "Add Product",
+  });
 });
 
 // path: admin/add-product
@@ -27,7 +29,7 @@ router.post("/add-product", (req, res, next) => {
     fs.writeFile(
       "./products.json",
       JSON.stringify({ productList: productList }, null, 2),
-      err => {
+      (err) => {
         if (err) {
           console.error(err);
         } else {

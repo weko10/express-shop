@@ -26,6 +26,7 @@ app.use("/admin", adminRouter);
 app.use((req, res, next) => {
   res.status(404).render(path.join(__dirname, "views", "404.ejs"), {
     pageTitle: "Page Not Found",
+    path: "",
   });
 });
 

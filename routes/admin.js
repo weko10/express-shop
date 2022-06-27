@@ -6,6 +6,7 @@ const fs = require("fs");
 router.get("/add-product", (req, res, next) => {
   res.render(path.join(__dirname, "..", "views", "add-product.ejs"), {
     pageTitle: "Add Product",
+    path: "/admin/add-product",
   });
 });
 

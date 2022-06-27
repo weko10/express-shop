@@ -11,6 +11,7 @@ router.get("/", (req, res, next) => {
     const parsedData = JSON.parse(data);
     res.render(path.join(__dirname, "..", "views", "shop.ejs"), {
       pageTitle: "My Shop",
+      path: "/",
       productList: parsedData.productList,
     });
   });

@@ -2,6 +2,7 @@ const fs = require("fs");
 
 exports.getAddProduct = (req, res, next) => {
   // gets add product form page
+  // path: /admin/add-product
 
   res.render("add-product.ejs", {
     pageTitle: "Add Product",
@@ -11,6 +12,7 @@ exports.getAddProduct = (req, res, next) => {
 
 exports.postAddProduct = (req, res, next) => {
   // post add product form
+  // path: /admin/add-product
 
   let newProduct = req.body;
 
@@ -44,6 +46,7 @@ exports.postAddProduct = (req, res, next) => {
 
 exports.getHome = (req, res, next) => {
   // get home page
+  // path: /
 
   fs.readFile("./products.json", "utf-8", (err, data) => {
     if (err) {

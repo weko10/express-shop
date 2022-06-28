@@ -3,7 +3,7 @@ const fs = require("fs");
 exports.getAddProduct = (req, res, next) => {
   // gets add product form page
 
-  res.render(path.join(__dirname, "..", "views", "add-product.ejs"), {
+  res.render("add-product.ejs", {
     pageTitle: "Add Product",
     path: "/admin/add-product",
   });
@@ -51,7 +51,7 @@ exports.getHome = (req, res, next) => {
       return;
     }
     const parsedData = JSON.parse(data);
-    res.render(path.join(__dirname, "..", "views", "shop.ejs"), {
+    res.render("shop.ejs", {
       pageTitle: "My Shop",
       path: "/",
       productList: parsedData.productList,

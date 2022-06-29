@@ -1,4 +1,4 @@
-const fs = require("fs");
+const Product = require("../models/product");
 
 exports.getAddProduct = (req, res, next) => {
   // gets add product form page
@@ -14,33 +14,15 @@ exports.postAddProduct = (req, res, next) => {
   // post add product form
   // path: /admin/add-product
 
-  let newProduct = req.body;
+  let newProduct = new Product(
+    req.body.name,
+    req.body.price,
+    req.body.description,
+    req.body.imgLink
+  );
 
-  // update products file
-  fs.readFile("./products.json", "utf-8", (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    const parsedData = JSON.parse(data);
-    const productList = parsedData.productList;
+  newProduct.save();
 
-    // push new product to list
-    productList.push(JSON.parse(JSON.stringify(newProduct)));
-
-    // rewrite data to file
-    fs.writeFile(
-      "./products.json",
-      JSON.stringify({ productList: productList }, null, 2),
-      err => {
-        if (err) {
-          console.error(err);
-        } else {
-          console.log("Successfully added product:", newProduct);
-        }
-      }
-    );
-  });
   res.redirect("/admin/add-product");
 };
 
@@ -48,16 +30,11 @@ exports.getHome = (req, res, next) => {
   // get home page
   // path: /
 
-  fs.readFile("./products.json", "utf-8", (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    const parsedData = JSON.parse(data);
+  Product.getAllProducts().then(productList => {
     res.render("shop.ejs", {
       pageTitle: "My Shop",
       path: "/",
-      productList: parsedData.productList,
+      productList: productList,
     });
   });
 };

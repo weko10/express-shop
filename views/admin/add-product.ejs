@@ -3,26 +3,28 @@
   <body>
     <header><%- include("../partials/navbar.ejs") %></header>
     <main>
-      <div class="form mx-3 w-50">
+      <div class="form mx-3" style="max-width: 650px">
         <form action="/admin/add-product" method="POST">
           <div class="mb-3">
-            <label for="productName">Product Name</label>
-            <input class="form-control" id="productName" type="text" name="name" />
+            <label for="name">Product Name</label>
+            <input class="form-control" id="name" type="text" name="name" />
           </div>
 
           <div class="mb-3">
-            <label for="product-price">Price</label>
-            <input class="form-control" id="product-price" type="number" name="price" />
+            <label for="price">Price</label>
+            <input class="form-control" id="price" type="number" step="0.01" name="price" />
           </div>
 
           <div class="mb-3">
-            <label for="product-description">Description</label>
-            <input class="form-control" id="product-description" type="text" name="description" />
+            <label for="imgLink">Image Link</label>
+            <input class="form-control" id="imgLink" type="text" name="imgLink" />
           </div>
 
           <div class="mb-3">
-            <label for="product-imgLink">Image Link</label>
-            <input class="form-control" id="product-imgLink" type="text" name="imgLink" />
+            <!-- <label for="product-description">Description</label>
+            <input class="form-control" id="product-description" type="text" name="description" /> -->
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
           </div>
 
           <input class="btn btn-primary" type="submit" value="Add" />

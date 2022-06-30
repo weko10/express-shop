@@ -1,8 +1,8 @@
 const fs = require("fs").promises;
 
 module.exports = class Product {
-  constructor(title, price, description, imgLink) {
-    this.title = title;
+  constructor(name, price, description, imgLink) {
+    this.name = name;
     this.price = price;
     this.description = description;
     this.imgLink = imgLink;

@@ -23,7 +23,7 @@ module.exports = class Product {
         const productList = JSON.parse(data);
 
         // push new product to list
-        productList.push(JSON.parse(JSON.stringify(this)));
+        productList.push(this);
 
         fs.writeFile("./products.json", JSON.stringify(productList, null, 2));
       })

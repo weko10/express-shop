@@ -4,7 +4,7 @@ exports.getAddProduct = (req, res, next) => {
   // gets add product form page
   // path: /admin/add-product
 
-  res.render("add-product.ejs", {
+  res.render("admin/add-product.ejs", {
     pageTitle: "Add Product",
     path: "/admin/add-product",
   });

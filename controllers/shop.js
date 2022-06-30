@@ -5,7 +5,7 @@ exports.getHome = (req, res, next) => {
   // path: /
 
   Product.getAllProducts().then(productList => {
-    res.render("shop.ejs", {
+    res.render("shop/home.ejs", {
       pageTitle: "My Shop",
       path: "/",
       productList: productList,

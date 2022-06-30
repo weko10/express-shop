@@ -2,7 +2,7 @@ const router = require("express").Router();
 
 const productsController = require("../controllers/shop");
 
-// index page
+// Home page
 router.get("/", productsController.getHome);
 
 // shows list of products (e.g. redirected to after using search box)

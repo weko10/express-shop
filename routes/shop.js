@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const productsController = require("../controllers/products");
+
+const productsController = require("../controllers/shop");
 
 // index page
 router.get("/", productsController.getHome);
